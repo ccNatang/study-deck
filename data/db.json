@@ -9,6 +9,16 @@
       "name": "React Router",
       "description": "React Router is a collection of navigational components that compose declaratively with your application.",
       "id": 2
+    },
+    {
+      "name": "Ruby on Rails Basics",
+      "description": "Core concepts for Rails development including MVC architecture, ActiveRecord, Migrations, and database relationships.",
+      "id": 3
+    },
+    {
+      "name": "Full Stack Interview Prep",
+      "description": "Common web development interview questions covering HTTP methods, REST APIs, CORS, and database types.",
+      "id": 4
     }
   ],
   "cards": [
@@ -43,11 +53,64 @@
       "id": 5
     },
     {
-      "cards": [],
-      "front": "b",
-      "back": "b",
-      "deckId": 1,
-      "id": 7
+      "front": "What is the MVC pattern in Rails?",
+      "back": "Model-View-Controller. Models handle data and business logic, Views handle the HTML/UI, and Controllers connect the two by handling user requests.",
+      "deckId": 3,
+      "id": 6
+    },
+    {
+      "front": "What is `ActiveRecord`?",
+      "back": "It is the ORM (Object Relational Mapping) layer in Rails that maps Ruby classes to database tables, allowing you to interact with the database using Ruby code instead of SQL.",
+      "id": 7,
+      "deckId": 3
+    },
+    {
+      "front": "Explain the difference between `has_many :through` and `has_and_belongs_to_many`.",
+      "back": "`has_many :through` works with a join model (which can have extra attributes), while `has_and_belongs_to_many` connects two tables directly via a join table without a dedicated model.",
+      "deckId": 3,
+      "id": 8
+    },
+    {
+      "front": "What is a Rails Migration?",
+      "back": "A Ruby file used to alter the database schema (create tables, add columns, etc.) in a consistent, version-controlled way.",
+      "deckId": 3,
+      "id": 9
+    },
+    {
+      "front": "What is the purpose of the params hash?",
+      "back": "It holds the data sent by the user in a request, such as form data, query string parameters, and URL route segments.",
+      "deckId": 3,
+      "id": 10
+    },
+    {
+      "front": "What is the difference between GET and POST requests?",
+      "back": "GET is used to retrieve data without changing server state. POST is used to send data to the server to create or update resources.",
+      "deckId": 4,
+      "id": 11
+    },
+    {
+      "front": "What is the purpose of a REST API?",
+      "back": "Representational State Transfer. It is an architectural style for designing networked applications where resources are accessed via standard HTTP methods (GET, POST, PUT, DELETE).",
+      "deckId": 4,
+      "id": 12
+    },
+    {
+      "front": "What is CORS?",
+      "back": "Cross-Origin Resource Sharing. It is a security feature that restricts web pages from making requests to a different domain than the one that served the web page.",
+      "deckId": 4,
+      "id": 13
+    },
+    {
+      "front": "What is the difference between SQL and NoSQL?",
+      "back": "SQL databases are relational and table-based (like PostgreSQL), while NoSQL databases are non-relational and can be document-based, key-value pairs, or graph-based (like MongoDB).",
+      "deckId": 4,
+      "id": 14
+    },
+    {
+      "front": "What is the useEffect hook used for?",
+      "back": "It lets you perform side effects in function components, such as fetching data, directly updating the DOM, or setting up subscriptions. It runs after the render.",
+      "deckId": 2,
+      "id": 15
     }
   ]
 }
