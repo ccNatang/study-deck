@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { readDeck, readCard, updateCard } from "../utils/api";
 import Breadcrumb from "../Common/Breadcrumb";
+import CardForm from "./CardForm";
 
 /**
  * Renders the Edit Card screen, allowing the user to modify an existing card.
@@ -82,7 +83,6 @@ function EditCard() {
 
   return (
     <div>
-      {/* Breadcrumb: Home / Deck Name / Edit Card ID */}
       <Breadcrumb 
         paths={[
           { name: deck.name, link: `/decks/${deck.id}` },
@@ -93,38 +93,13 @@ function EditCard() {
 
       <h2>Edit Card</h2>
 
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="front">Front</label>
-          <textarea
-            id="front"
-            name="front"
-            className="form-control"
-            rows="3"
-            onChange={handleChange}
-            value={formData.front}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="back">Back</label>
-          <textarea
-            id="back"
-            name="back"
-            className="form-control"
-            rows="3"
-            onChange={handleChange}
-            value={formData.back}
-            required
-          />
-        </div>
-        <button type="button" className="btn btn-secondary mr-2" onClick={handleCancel}>
-          Cancel
-        </button>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
+      <CardForm 
+        formData={formData}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        deckId={deckId}
+        isNew={false} 
+      />
     </div>
   );
 }
