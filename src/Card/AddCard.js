@@ -87,6 +87,7 @@ function AddCard() {
         handleSubmit={handleSubmit}
         handleCancel={handleDone}
         isNew={true}
+        deckId={deckId}
       />
     </div>
   );

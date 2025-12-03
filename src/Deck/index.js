@@ -70,6 +70,7 @@ function Deck() {
       key={card.id} 
       card={card} 
       handleDeleteCard={handleDeleteCard} 
+      deckId={deckId}
     />
   ));
 
