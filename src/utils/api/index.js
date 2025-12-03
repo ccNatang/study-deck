@@ -11,9 +11,6 @@ const headers = new Headers();
 headers.append("Content-Type", "application/json");
 
 /**
- * Removes the `cards` property from the deck so it is not accidentally saved with the deck.
- *
- * This function is NOT exported because it is not needed outside of this file.
  *
  * @param deck
  *  the deck instance
@@ -27,8 +24,6 @@ function stripCards(deck) {
 
 /**
  * Fetch `json` from the specified URL and handle error status codes and ignore `AbortError`s
- *
- * This function is NOT exported because it is not needed outside of this file.
  *
  * @param url
  *  the url for the requst.
@@ -76,7 +71,6 @@ export async function listDecks(signal) {
 
 /**
  * Saves deck to the database (public/data/db.json).
- * There is no validation done on the deck object, any object will be saved.
  * @param deck
  *  the deck to save, which must not have an `id` property
  * @param signal
@@ -157,8 +151,6 @@ export async function deleteDeck(deckId, signal) {
  *  a promise that resolves to the new card, which will have an `id` property.
  */
 export async function createCard(deckId, card, signal) {
-  // There is a bug in json-server, if you post to /decks/:deckId/cards the associated deckId is a string
-  // and the card is not related to the deck because the data types of the ID's are different.
   const url = `${API_BASE_URL}/cards`;
   card.deckId = Number(deckId);
   const options = {
